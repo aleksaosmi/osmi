@@ -3,17 +3,17 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
-    color: #333;
+    background: #0e0e10; /* obsidian black */
+    color: #e0e0e0;
 }
 
 .app {
     max-width: 400px;
     margin: 40px auto;
-    background: white;
+    background: #1a1a1d;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     position: relative;
 }
@@ -26,16 +26,18 @@ header {
 
 header h1 {
     font-size: 24px;
+    color: #ffffff;
 }
 
 .profile img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: 2px solid #444;
 }
 
 .card {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #3a3a3d, #5a5a5d);
     color: white;
     padding: 20px;
     border-radius: 20px;
@@ -57,7 +59,7 @@ header h1 {
 
 .card-number {
     font-size: 14px;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .actions {
@@ -67,9 +69,9 @@ header h1 {
 }
 
 .actions button {
-    background: #ff7e5f;
+    background: #28282b;
     color: white;
-    border: none;
+    border: 2px solid #444;
     border-radius: 12px;
     padding: 10px;
     flex: 1;
@@ -79,17 +81,18 @@ header h1 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .actions button:hover {
-    background: #feb47b;
+    background: #3a3a3d;
+    transform: scale(1.05);
+    border-color: #00c6ff;
 }
 
 #earnBtn {
     width: 100%;
     padding: 15px;
-    background: #00c6ff;
     background: linear-gradient(to right, #0072ff, #00c6ff);
     color: white;
     font-size: 18px;
@@ -102,10 +105,11 @@ header h1 {
 
 #earnBtn:hover {
     background: linear-gradient(to right, #005bea, #00c6ff);
+    transform: scale(1.05);
 }
 
 .transactions {
-    background: #f9f9f9;
+    background: #202024;
     border-radius: 20px;
     padding: 15px;
 }
@@ -118,11 +122,11 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: #2a2a2d;
     padding: 10px;
     border-radius: 12px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 .txn-info {
@@ -131,7 +135,7 @@ header h1 {
 }
 
 .txn-icon {
-    background: #667eea;
+    background: #0072ff;
     color: white;
     width: 40px;
     height: 40px;
@@ -171,12 +175,12 @@ header h1 {
     color: gray;
 }
 
-/* Animation for falling dollars */
+/* Falling Dollar Animation */
 .dollar {
     position: absolute;
     top: -50px;
     font-size: 24px;
-    color: green;
+    color: #00ff00;
     animation: fall 3s linear infinite;
     pointer-events: none;
 }
@@ -186,4 +190,14 @@ header h1 {
         transform: translateY(700px);
         opacity: 0;
     }
+}
+
+/* Flash Effect for Balance Update */
+.flash {
+    animation: flashAnim 0.4s alternate 2;
+}
+
+@keyframes flashAnim {
+    from { color: #ffffff; }
+    to { color: #00ff00; }
 }
