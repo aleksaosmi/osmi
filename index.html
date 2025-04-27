@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Dashboard UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>BRAVE.</h1>
+            <div class="profile">
+                <img src="https://via.placeholder.com/40" alt="User">
+            </div>
+        </header>
+
+        <div class="card">
+            <div class="card-header">
+                <span>tempest</span>
+                <div class="toggle"></div>
+            </div>
+            <div class="balance">$<span id="balance">12256</span></div>
+            <div class="card-number">3658 5678 6925 1576</div>
+        </div>
+
+        <div class="actions">
+            <button id="sendBtn">
+                <div class="icon">➤</div>
+                Send
+            </button>
+            <button id="analyticsBtn">
+                <div class="icon">📊</div>
+                Analytics
+            </button>
+            <button id="receiveBtn">
+                <div class="icon">⬇</div>
+                Receive
+            </button>
+        </div>
+
+        <button id="earnBtn">Earn $100</button>
+
+        <div class="transactions">
+            <h2>Recent Transactions</h2>
+            <div class="transaction">
+                <div class="txn-info">
+                    <div class="txn-icon">A</div>
+                    <div class="txn-details">
+                        <div class="name">Amazon App</div>
+                        <div class="type">Debit</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="txn-amount expense">- $125</div>
+                    <div class="txn-time">10:25 AM</div>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="txn-info">
+                    <div class="txn-icon">G</div>
+                    <div class="txn-details">
+                        <div class="name">Google Ads</div>
+                        <div class="type">Debit</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="txn-amount income">+ $500</div>
+                    <div class="txn-time">02:55 PM</div>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="txn-info">
+                    <div class="txn-icon">D</div>
+                    <div class="txn-details">
+                        <div class="name">Adrian</div>
+                        <div class="type">Debit</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="txn-amount income">+ $250</div>
+                    <div class="txn-time">06:28 PM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

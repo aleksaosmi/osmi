@@ -1,0 +1,189 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #333;
+}
+
+.app {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.balance {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.card-number {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.actions button {
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    flex: 1;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.actions button:hover {
+    background: #feb47b;
+}
+
+#earnBtn {
+    width: 100%;
+    padding: 15px;
+    background: #00c6ff;
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#earnBtn:hover {
+    background: linear-gradient(to right, #005bea, #00c6ff);
+}
+
+.transactions {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.transactions h2 {
+    margin: 0 0 10px 0;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.txn-info {
+    display: flex;
+    align-items: center;
+}
+
+.txn-icon {
+    background: #667eea;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.txn-details .name {
+    font-weight: bold;
+}
+
+.txn-details .type {
+    font-size: 12px;
+    color: gray;
+}
+
+.txn-amount {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+}
+
+.expense {
+    color: #ff4e50;
+}
+
+.income {
+    color: #50c878;
+}
+
+.txn-time {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Animation for falling dollars */
+.dollar {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    color: green;
+    animation: fall 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(700px);
+        opacity: 0;
+    }
+}
